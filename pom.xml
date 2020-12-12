@@ -19,6 +19,7 @@
 	<properties>
 		<java.version>1.8</java.version>
 		<activiti.version>7.1.0.M2</activiti.version>
+		<poi.version>3.17</poi.version>
 	</properties>
 
 	<dependencyManagement>
@@ -196,7 +197,33 @@
 			<version>1.20</version>
 		</dependency>
 		
-       
+		<dependency>
+		    <groupId>cn.afterturn</groupId>
+		    <artifactId>easypoi-base</artifactId>
+		    <version>4.0.0</version>
+		</dependency>
+		<dependency>
+		    <groupId>cn.afterturn</groupId>
+		    <artifactId>easypoi-web</artifactId>
+		    <version>4.0.0</version>
+		</dependency>
+		<dependency>
+		    <groupId>cn.afterturn</groupId>
+		    <artifactId>easypoi-annotation</artifactId>
+		    <version>4.0.0</version>
+		</dependency>
+		 
+		<dependency>
+		    <groupId>org.apache.poi</groupId>
+		    <artifactId>poi</artifactId>
+		    <version>${poi.version}</version>
+		</dependency>
+		<dependency>
+		    <groupId>org.apache.poi</groupId>
+		    <artifactId>poi-ooxml</artifactId>
+		    <version>${poi.version}</version>
+		</dependency>
+
 	</dependencies>
 
 	<build>

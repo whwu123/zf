@@ -29,7 +29,7 @@
 		<t:dgCol name="id" label="序号" hidden="true" key="true" width="20"></t:dgCol>
 		<t:dgCol name="title" label="标题"  query="true"></t:dgCol>
 		<t:dgCol name="typeId" label="类型" replace="${draftTypeReplace }" width="50" query="true"></t:dgCol>
-		 <t:dgCol name="draftUrl" width="50" label="链接"  ></t:dgCol>
+		<t:dgCol name="draftUrl" width="40" label="链接"  ></t:dgCol>
 		<t:dgCol name="taskType" label="任务类型" replace="指派任务_2,自主报题_1" width="50" query="true"></t:dgCol>
 		<t:dgCol name="createNickname" label="创建者"  width="60" query="true"></t:dgCol>
 		<t:dgCol name="grade" label="评分"  width="30"></t:dgCol>
@@ -40,7 +40,7 @@
 		<t:dgToolBar url="draftr/addorupdate" type="add" width="50%" height="70%" operationCode="sys:draft:add"></t:dgToolBar>
 		<t:dgToolBar url="draftr/addorupdate" type="edit" width="50%" height="70%" operationCode="sys:draft:edit"></t:dgToolBar>
 		<t:dgToolBar url="draftr/addorupdate" type="view" width="50%" height="70%" operationCode="sys:draft:view"></t:dgToolBar>
-		
+		<t:dgToolBar label="导出" icon="glyphicon glyphicon-resize-full" type="define"  funName="excel"></t:dgToolBar>
 	</t:datagrid>
 <script type="text/javascript">
 		$(function(){
@@ -50,6 +50,11 @@
 		function showUrl(url){
 			window.open(url); 
 		}
+		function excel(){
+			var createNickname = $("#createNickname").val();
+			location.href = "excel/export2003?createNickname="+createNickname;
+		}
+		
 </script>
 </body>
 </html>
