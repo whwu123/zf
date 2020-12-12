@@ -51,8 +51,10 @@
 			window.open(url); 
 		}
 		function excel(){
+			var issueDate_begin = $("#issueDate_begin").val();
+			var issueDate_end = $("#issueDate_end").val();
 			var createNickname = $("#createNickname").val();
-			location.href = "excel/export2003?createNickname="+createNickname;
+			location.href = "excel/export2003?createNickname="+createNickname+"&issueDate_begin="+issueDate_begin+"&issueDate_end="+issueDate_end;
 		}
 		
 </script>

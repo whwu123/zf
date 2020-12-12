@@ -45,10 +45,13 @@ public class ExcelController {
 	private DraftService draftService;
 	
 	@RequestMapping(value = "/export2003", method = RequestMethod.GET)
-	public void export2003(HttpServletRequest request, HttpServletResponse response,String createNickname) {
+	public void export2003(HttpServletRequest request, HttpServletResponse response,String createNickname,String issueDate_begin,String issueDate_end) {
 		
 		QueryWrapper<DraftEntity> queryWrapper = new QueryWrapper<>();
 		queryWrapper.like("create_nickname", createNickname);
+		if(!issueDate_begin.isEmpty() && !issueDate_end.isEmpty()) {
+			queryWrapper.between("issue_date", issueDate_begin, issueDate_end);
+		}
 		List<DraftEntity> list = new ArrayList<DraftEntity>();
 		list = draftService.list(queryWrapper);
 		
