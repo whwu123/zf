@@ -71,7 +71,10 @@
     	  // alert(content)
     	   return true;
        }
-	
+       $(function() {
+    	   
+    	   
+       })
 	
     </script>
 </body>
