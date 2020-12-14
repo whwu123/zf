@@ -159,7 +159,7 @@ public class DraftController extends BaseController {
 			}
 			ActiveUser user = ShiroUtils.getSessionUser();
 			//删除用户
-			draftTypeService.removeById(id);
+			draftService.removeById(id);
 			log.info("用户：" + user.getUserName() + "删除了id为：" + id + "的稿件统计信息");
 		}catch(Exception e) {
 			log.error("删除稿件统计信息报错，错误信息：{}", e.getMessage());

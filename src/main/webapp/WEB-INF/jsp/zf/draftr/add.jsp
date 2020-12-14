@@ -66,7 +66,7 @@
                             <div class="form-group" >
                                 <label class="col-sm-3 control-label">评分：</label>
                                 <div class="col-sm-8">
-                                   <input id="grade" name="grade"  type="text" class="form-control" required="" value="${draftEntity.grade }" <c:if test="${gradeFlag }">disabled="disabled"</c:if> />
+                                   <input id="grade" name="grade"  type="text" class="form-control"  value="${draftEntity.grade }" <c:if test="${gradeFlag }">disabled="disabled"</c:if> />
                                 </div>
                             </div>
                             <div class="form-group">

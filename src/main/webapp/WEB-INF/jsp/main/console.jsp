@@ -12,46 +12,46 @@
             <div class="col-sm-3">
                 <div class="ibox float-e-margins">
                     <div class="ibox-title">
-                        <span class="label label-success pull-right">月</span>
-                        <h5>收入</h5>
+                        <span class="label label-success pull-right">今日</span>
+                        <h5>今日稿件发布成功量</h5>
                     </div>
                     <div class="ibox-content">
-                        <h1 class="no-margins">40 886,200</h1>
-                        <div class="stat-percent font-bold text-success">98% <i class="fa fa-bolt"></i>
+                        <h1 class="no-margins">8</h1>
+                        <div class="stat-percent font-bold text-success"><i class="fa fa-bolt"></i>
                         </div>
-                        <small>总收入</small>
+                        <small>条</small>
                     </div>
                 </div>
             </div>
             <div class="col-sm-3">
                 <div class="ibox float-e-margins">
                     <div class="ibox-title">
-                        <span class="label label-info pull-right">全年</span>
-                        <h5>订单</h5>
+                        <span class="label label-info pull-right">本月</span>
+                        <h5>本月稿件发布成功量</h5>
                     </div>
                     <div class="ibox-content">
-                        <h1 class="no-margins">275,800</h1>
-                        <div class="stat-percent font-bold text-info">20% <i class="fa fa-level-up"></i>
+                        <h1 class="no-margins">500</h1>
+                        <div class="stat-percent font-bold text-info"><i class="fa fa-level-up"></i>
                         </div>
-                        <small>新订单</small>
+                        <small>条</small>
                     </div>
                 </div>
             </div>
             <div class="col-sm-3">
                 <div class="ibox float-e-margins">
                     <div class="ibox-title">
-                        <span class="label label-primary pull-right">今天</span>
-                        <h5>访客</h5>
+                        <span class="label label-primary pull-right">本年</span>
+                        <h5>本年稿件发布成功量</h5>
                     </div>
                     <div class="ibox-content">
                         <h1 class="no-margins">106,120</h1>
-                        <div class="stat-percent font-bold text-navy">44% <i class="fa fa-level-up"></i>
+                        <div class="stat-percent font-bold text-navy"><i class="fa fa-level-up"></i>
                         </div>
-                        <small>新访客</small>
+                        <small>条</small>
                     </div>
                 </div>
             </div>
-            <div class="col-sm-3">
+            <!-- <div class="col-sm-3">
                 <div class="ibox float-e-margins">
                     <div class="ibox-title">
                         <span class="label label-danger pull-right">最近一个月</span>
@@ -64,9 +64,9 @@
                         <small>12月</small>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
-    <div class="row  border-bottom white-bg dashboard-header">
+    <!-- <div class="row  border-bottom white-bg dashboard-header">
         <div class="col-sm-3">
             <h2>Hello,Guest</h2>
             <small>欢迎扫描以下二维码关注我们：</small>
@@ -121,14 +121,14 @@
             </ol>
         </div>
 
-    </div>
+    </div> -->
     <div class="wrapper wrapper-content">
         <div class="row">
             <div class="col-sm-4">
 
                 <div class="ibox float-e-margins">
                     <div class="ibox-title">
-                        <h5>二次开发</h5>
+                        <h5>开发</h5>
                     </div>
                     <div class="ibox-content">
                         <p>我们是专业的软件基础平台与解决方案提供商，为企事业单位提供创新可靠的软件基础平台产品及技术服务</p>
@@ -140,18 +140,18 @@
 
                     </div>
                     <div class="ibox-content">
-                        <p><i class="fa fa-send-o"></i> 官方网站：<a href="http://www.active4j.com/" target="_blank">www.active4j.com</a>
+                       <!--  <p><i class="fa fa-send-o"></i> 官方网站：<a href="http://www.active4j.com/" target="_blank">www.active4j.com</a>
+                        </p> -->
+                        <p><i class="fa fa-qq"></i> QQ：<a href="javascript:;" target="_blank">472997069</a>
                         </p>
-                        <p><i class="fa fa-qq"></i> QQ：<a href="javascript:;" target="_blank">113578375</a>
+                        <p><i class="fa fa-weixin"></i> 微信号：<a href="javascript:;">472997069</a>
                         </p>
-                        <p><i class="fa fa-weixin"></i> 微信号：<a href="javascript:;">chen_terry</a>
-                        </p>
-                        <p><i class="fa fa-credit-card"></i> qq群：<a href="javascript:;">203802692</a>
+                        <p><i class="fa fa-credit-card"></i> 联系电话<a href="javascript:;">18665022235</a>
                         </p>
                     </div>
                 </div>
             </div>
-            <div class="col-sm-4">
+            <!-- <div class="col-sm-4">
                 <div class="ibox float-e-margins">
                     <div class="ibox-title">
                         <h5>更新日志</h5>
@@ -175,7 +175,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
     </div>
 </div>
