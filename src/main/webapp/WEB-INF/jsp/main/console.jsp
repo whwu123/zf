@@ -9,6 +9,20 @@
 
 <body class="gray-bg">
 <div class="row">
+			<div class="col-sm-3">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-title">
+                        <span class="label label-success pull-right">昨日</span>
+                        <h5>昨日稿件发布成功量</h5>
+                    </div>
+                    <div class="ibox-content">
+                        <h1 class="no-margins">8</h1>
+                        <div class="stat-percent font-bold text-success"><i class="fa fa-bolt"></i>
+                        </div>
+                        <small>条</small>
+                    </div>
+                </div>
+            </div>
             <div class="col-sm-3">
                 <div class="ibox float-e-margins">
                     <div class="ibox-title">
@@ -126,14 +140,14 @@
         <div class="row">
             <div class="col-sm-4">
 
-                <div class="ibox float-e-margins">
+                <!-- <div class="ibox float-e-margins">
                     <div class="ibox-title">
                         <h5>开发</h5>
                     </div>
                     <div class="ibox-content">
                         <p>我们是专业的软件基础平台与解决方案提供商，为企事业单位提供创新可靠的软件基础平台产品及技术服务</p>
                     </div>
-                </div>
+                </div> -->
                 <div class="ibox float-e-margins">
                     <div class="ibox-title">
                         <h5>联系信息</h5>

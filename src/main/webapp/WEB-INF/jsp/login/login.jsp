@@ -27,10 +27,10 @@
             <h3>中方县融媒体中心</h3>
             <form class="form-horizontal m-t" id="signupForm" action="login" method="post">
                 <div class="form-group">
-                    <input type="text" name="userName" id="userName" value="admin" class="form-control" placeholder="用户名" required="">
+                    <input type="text" name="userName" id="userName" value="zf" class="form-control" placeholder="用户名" required="">
                 </div>
                 <div class="form-group">
-                    <input type="password" name="password" id="password" value="123456" class="form-control" placeholder="密码" required="">
+                    <input type="password" name="password" id="password" value="zf" class="form-control" placeholder="密码" required="">
                 </div>
                 <!-- <div class="form-group">
                     <input id="randCode" name="randCode" type="text" class="form-control" placeholder="验证码" required="" style="width: 60%">

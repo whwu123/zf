@@ -2,6 +2,7 @@ package com.active4j.hr.longche.controller;
 
 
 import java.util.Date;
+import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -44,7 +45,14 @@ public class MaintenanceController {
 	
 	@RequestMapping(value = "/list", method = RequestMethod.GET)
 	public String list(Model model) {
-		
+		System.out.println("测试进入");
+		System.out.println("测试进入");
+		System.out.println("测试进入");
+		System.out.println("测试进入");
+		System.out.println("测试进入");
+		System.out.println("测试进入");
+		System.out.println("测试进入");
+		System.out.println("测试进入");
 		return "longche/maintenance/index";
 	}
 
@@ -88,7 +96,7 @@ public class MaintenanceController {
 	
 	@RequestMapping("/save")
 	@ResponseBody
-	@Log(type = LogType.save, name = "保存商城信息", memo = "新增或编辑保存了商城信息")
+	@Log(type = LogType.save, name = "保存维修厂信息", memo = "新增或编辑保存了维修厂信息")
 	public AjaxJson saveSales(HttpServletRequest req, MaintenanceEntity maintenanceEntity) {
 		AjaxJson j = new AjaxJson();
 		try {
@@ -127,9 +135,9 @@ public class MaintenanceController {
 			}
 			
 		}catch(Exception e) {
-			log.error("保存用户信息报错，错误信息:" + e.getMessage());
+			log.error("保存维修厂信息报错，错误信息:" + e.getMessage());
 			j.setSuccess(false);
-			j.setMsg("保存用户错误");
+			j.setMsg("保存维修厂错误");
 			e.printStackTrace();
 		}
 		
@@ -157,6 +165,22 @@ public class MaintenanceController {
 			j.setMsg("删除维修厂信息错误");
 			e.printStackTrace();
 		}
+		return j;
+	}
+	
+	@RequestMapping(value = "/restList", method = RequestMethod.GET)
+	@ResponseBody
+	public AjaxJson restList() {
+		//拼接查询条件
+		QueryWrapper<MaintenanceEntity> queryWrapper = new QueryWrapper<MaintenanceEntity>();
+		queryWrapper.eq("state", 1);
+		//执行查询
+		List<MaintenanceEntity> lstResult = maintenanceService.list(queryWrapper);
+		//输出结果
+		AjaxJson j = new AjaxJson();
+		j.setObj(lstResult);
+		j.setSuccess(true);
+		j.setMsg("返回数据");
 		return j;
 	}
 }

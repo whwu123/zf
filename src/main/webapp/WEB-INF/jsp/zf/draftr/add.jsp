@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<t:base type="default,select2,icheck,laydate,webuploader"></t:base>
+<t:base type="default,treeview,laydate,icheck,prettyfile,webuploader"></t:base>
 </head>
 <body class="gray-bg">
 	<div class="wrapper wrapper-content animated fadeInRight">
@@ -14,8 +14,9 @@
 						<t:formvalid action="draftr/save">
 							<input type="hidden" name="id" id="id" value="${draftEntity.id }">
 							<input type="hidden" name="state" id="state" value="${draftEntity.state }">
+							<input type="hidden" name="filePath" id="filePath"   value="${draftEntity.filePath }" />
 							<div class="form-group">
-                                <label class="col-sm-3 control-label">稿件标题：</label>
+                                <label class="col-sm-3 control-label">稿件标题*：</label>
                                 <div class="col-sm-8">
                                    <input id="title" name="title"  type="text" class="form-control" required="" value="${draftEntity.title }" />
                                 </div>
@@ -23,7 +24,7 @@
                             <div class="form-group">
                                 <label class="col-sm-3 control-label">稿件链接：</label>
                                 <div class="col-sm-8">
-                                   <input id="draftUrl" name="draftUrl"  type="text" class="form-control" required="" value="${draftEntity.draftUrl }" />
+                                   <input id="draftUrl" name="draftUrl"  type="text" class="form-control" value="${draftEntity.draftUrl }" />
                                 </div>
                             </div>
                             <div class="form-group">
@@ -75,6 +76,16 @@
                                    <textarea rows="6" id="remark" name="remark"  class="form-control">${draftEntity.remark }</textarea>
                                 </div>
                             </div>
+                             <div class="form-group">
+                                <label class="col-sm-3 control-label m-b">附件:</label>
+								<div class="col-sm-2">
+									<div id="filePicker">上传附件</div>
+									
+								</div>
+								<div class="col-sm-4">
+									<div id="fileList" class="uploader-list" style="margin-top: 10px;"></div>
+								</div>
+                            </div>
 						</t:formvalid>
                     </div>
 				</div>
@@ -84,9 +95,52 @@
 </body>
 <script type="text/javascript">
 $(function() {
-	   
+	
+	//初始化Web Uploader
+	var uploader = WebUploader.create({
+
+		// 选完文件后，是否自动上传。
+		auto : true,
+
+		// swf文件路径
+		swf : 'static/webuploader/Uploader.swf',
+
+		// 文件接收服务端。
+		server : 'fileUploaderZfController/fileupload',
+
+		// 选择文件的按钮。可选。
+		// 内部根据当前运行是创建，可能是input元素，也可能是flash.
+		pick : {
+			id : '#filePicker',
+		},
+
+	});
+
+
+	// 文件上传过程中创建进度条实时显示。
+	uploader.on('uploadProgress', function(file, percentage) {
+	});
+
+	// 文件上传成功，给item添加成功class, 用样式标记上传成功。
+	uploader.on('uploadSuccess', function(file, data) {
+		var filePath = data.filePath; 
+		$("#fileList").html(file.name);
+		$("#filePath").val(filePath);
+		alert($("#filePath").val());
+	});
+
+	// 文件上传失败，显示上传出错。
+	uploader.on('uploadError', function(file) {
+
+	});
+
+	// 完成上传完了，成功或者失败，先删除进度条。
+	uploader.on('uploadComplete', function(file) {
+		qhTipSuccess('上传完成....');
+	});
+	
+	
 	   laydate({elem:"#issueDate",event:"focus",istime: true, format: 'YYYY-MM-DD'});
-	   
 })
 </script>
 </html>

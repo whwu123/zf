@@ -60,5 +60,8 @@ public class DraftEntity extends BaseEntity{
 	@QueryField(queryColumn="create_nickname", condition=QueryCondition.like)
 	private String createNickname;
 	
+	@TableField("file_path")
+	private String filePath;
+	
 
 }
