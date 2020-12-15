@@ -4,6 +4,28 @@
 <html>
 <head>
 <t:base type="default,treeview,laydate,icheck,prettyfile,webuploader"></t:base>
+<style type="text/css">
+.file {
+    position: relative;
+    display: inline-block;
+    background: #D0EEFF;
+    border: 1px solid #99D3F5;
+    border-radius: 4px;
+    padding: 4px 12px;
+    overflow: hidden;
+    color: #1E88C7;
+    text-decoration: none;
+    text-indent: 0;
+    line-height: 20px;
+}
+
+.file:hover {
+    background: #AADFFD;
+    border-color: #78C3F3;
+    color: #004974;
+    text-decoration: none;
+}
+</style>
 </head>
 <body class="gray-bg">
 	<div class="wrapper wrapper-content animated fadeInRight">
@@ -64,10 +86,21 @@
                                 </div>
                             </div>
                             
-                            <div class="form-group" >
+                            <div class="form-group" <c:if test="${gradeFlag }">style="display: none"</c:if> >
                                 <label class="col-sm-3 control-label">评分：</label>
                                 <div class="col-sm-8">
-                                   <input id="grade" name="grade"  type="text" class="form-control"  value="${draftEntity.grade }" <c:if test="${gradeFlag }">disabled="disabled"</c:if> />
+                                 
+                                	<select name="grade" class="form-control help-block m-b-none" aria-invalid="false" id="grade" >
+                                		<option value=""  > 请选择 </option>
+	                                    <option value="A"  <c:if test="${draftEntity.grade=='A'}">selected="selected"</c:if> >A</option>
+	                                    <option value="B+"  <c:if test="${draftEntity.grade=='B+'}">selected="selected"</c:if> >B+</option>
+	                                    <option value="B"  <c:if test="${draftEntity.grade=='B'}">selected="selected"</c:if> >B</option>
+	                                    <option value="C+"  <c:if test="${draftEntity.grade=='C+'}">selected="selected"</c:if> >C+</option>
+	                                    <option value="C"  <c:if test="${draftEntity.grade=='C'}">selected="selected"</c:if> >C</option>
+	                                    <option value="D"  <c:if test="${draftEntity.grade=='D'}">selected="selected"</c:if> >D</option>
+                                    </select>
+                                
+                                
                                 </div>
                             </div>
                             <div class="form-group">
@@ -76,14 +109,21 @@
                                    <textarea rows="6" id="remark" name="remark"  class="form-control">${draftEntity.remark }</textarea>
                                 </div>
                             </div>
-                             <div class="form-group">
+                             <div class="form-group" id="filePickerdiv">
                                 <label class="col-sm-3 control-label m-b">附件:</label>
-								<div class="col-sm-2">
+								<div class="col-sm-2" >
 									<div id="filePicker">上传附件</div>
 									
 								</div>
 								<div class="col-sm-4">
 									<div id="fileList" class="uploader-list" style="margin-top: 10px;"></div>
+								</div>
+                            </div>
+                            
+                             <div class="form-group" id="filedowDiv" >
+                                <label class="col-sm-3 control-label m-b">附件:</label>
+								<div class="col-sm-8" >
+									 <a href="javascript:void(0)" class="file" style="margin-top: 10px" onclick="popup()">下载附件 </a>
 								</div>
                             </div>
 						</t:formvalid>
@@ -94,6 +134,12 @@
 	</div>
 </body>
 <script type="text/javascript">
+function popup(){
+	var draftrId = $("#id").val();
+	if(draftrId!= null && draftrId!=""){
+		window.location.href= "fileDownloadController/download?draftrId="+draftrId;
+	}
+}
 $(function() {
 	
 	//初始化Web Uploader
@@ -140,8 +186,19 @@ $(function() {
 	});
 	
 	
-	   laydate({elem:"#issueDate",event:"focus",istime: true, format: 'YYYY-MM-DD'});
+	laydate({elem:"#issueDate",event:"focus",istime: true, format: 'YYYY-MM-DD'});
+	
+	var filePathValue = $("#filePath").val();
+	if(filePathValue!=null && filePathValue!="" ){
+		$("#filedowDiv").show();
+		$("#filePickerdiv").hide();
+	}else{
+		$("#filedowDiv").hide();
+		$("#filePickerdiv").show();
+	}
 })
+
+
 </script>
 </html>
 

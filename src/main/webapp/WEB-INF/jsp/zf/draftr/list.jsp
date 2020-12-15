@@ -38,7 +38,7 @@
 		<t:dgDelOpt label="删除" url="draftr/del?id={id}" operationCode="	sys:draft:del"/>
 		<t:dgFunOpt label="查看链接" funName="showUrl(draftUrl)" icon="glyphicon glyphicon-saved"></t:dgFunOpt>
 		<t:dgToolBar url="draftr/addorupdate" type="add" width="50%" height="70%" operationCode="sys:draft:add"></t:dgToolBar>
-		<t:dgToolBar url="draftr/addorupdate" type="edit" width="50%" height="70%" operationCode="sys:draft:edit"></t:dgToolBar>
+		<t:dgToolBar url="draftr/addorupdate" type="edit" width="50%" height="70%" ></t:dgToolBar>
 		<t:dgToolBar url="draftr/addorupdate" type="view" width="50%" height="70%" operationCode="sys:draft:view"></t:dgToolBar>
 		<t:dgToolBar label="导出" icon="glyphicon glyphicon-resize-full" type="define"  funName="excel"></t:dgToolBar>
 	</t:datagrid>

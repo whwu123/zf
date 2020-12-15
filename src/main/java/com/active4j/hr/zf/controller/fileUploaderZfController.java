@@ -138,7 +138,7 @@ public class fileUploaderZfController {
 		is.close();
 		os.close();
 		
-		String filePath =  request.getContextPath() + "/zfFile/" + fileName;
+		String filePath = fileName;
 		json.put("msg", "上传成功");
 		json.put("filePath", filePath);
 		json.put("code", 0);
