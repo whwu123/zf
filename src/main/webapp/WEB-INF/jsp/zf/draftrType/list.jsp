@@ -31,9 +31,9 @@
 		<t:dgCol name="sort" label="排序"  ></t:dgCol>
 		<t:dgCol name="state" label="状态" replace="正常_1,禁用_0" width="60"></t:dgCol>
 		<t:dgCol name="opt" label="操作" width="100"></t:dgCol>
-		<t:dgDelOpt label="删除" url="draftrType/del?id={id}" operationCode="sys:type:del"/>
-		<t:dgToolBar url="draftrType/addorupdate" type="add" width="40%" height="30%" operationCode="sys:type:add"></t:dgToolBar>
-		<t:dgToolBar url="draftrType/addorupdate" type="edit" width="40%" height="30%" operationCode="sys:type:edit"></t:dgToolBar>
+		<t:dgDelOpt label="删除" url="draftrType/del?id={id}" operationCode="sys:drafttype:del"/>
+		<t:dgToolBar url="draftrType/addorupdate" type="add" width="40%" height="30%" operationCode="sys:drafttype:add"></t:dgToolBar>
+		<t:dgToolBar url="draftrType/addorupdate" type="edit" width="40%" height="30%" operationCode="sys:drafttype:edit"></t:dgToolBar>
 	</t:datagrid>
 <script type="text/javascript">
 		

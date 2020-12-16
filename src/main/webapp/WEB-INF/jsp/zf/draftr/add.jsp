@@ -98,6 +98,8 @@
 	                                    <option value="C+"  <c:if test="${draftEntity.grade=='C+'}">selected="selected"</c:if> >C+</option>
 	                                    <option value="C"  <c:if test="${draftEntity.grade=='C'}">selected="selected"</c:if> >C</option>
 	                                    <option value="D"  <c:if test="${draftEntity.grade=='D'}">selected="selected"</c:if> >D</option>
+	                                    <option value="E"  <c:if test="${draftEntity.grade=='E'}">selected="selected"</c:if> >E</option>
+	                                    <option value="E+"  <c:if test="${draftEntity.grade=='E+'}">selected="selected"</c:if> >E+</option>
                                     </select>
                                 
                                 
