@@ -89,6 +89,13 @@
                                 	
                                 </div>
                             </div>
+                            
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">任务数量：</label>
+                                <div class="col-sm-8">
+                                    <input id="taskNumber" name="taskNumber" type="number" class="form-control" value="${user.taskNumber }">
+                                </div>
+                            </div>
 						</t:formvalid>
                     </div>
 				</div>

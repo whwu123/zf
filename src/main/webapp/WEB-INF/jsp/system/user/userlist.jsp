@@ -32,6 +32,7 @@
 		<t:dgCol name="admin" label="是否管理员" dictionary="byesorno" query="true"></t:dgCol>
 		<t:dgCol name="deptId" label="部门" replace="${departsReplace}" query="true" common="depart" queryId="deptId" valueId="deptId"></t:dgCol>
 		<t:dgCol name="status" label="状态" replace="正常_1,禁用_0" query="true"></t:dgCol>
+		<t:dgCol name="taskNumber" label="任务数量"  ></t:dgCol>
 		<t:dgCol name="opt" label="操作" width="290"></t:dgCol>
 		<t:dgDelOpt label="删除" url="sys/user/del?id={id}" operationCode="sys:user:del"/>
 		<t:dgToolBar url="sys/user/addorupdate" type="add" width="60%" operationCode="sys:user:add"></t:dgToolBar>

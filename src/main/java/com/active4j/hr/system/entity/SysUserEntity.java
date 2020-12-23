@@ -99,4 +99,7 @@ public class SysUserEntity extends BaseEntity{
 	private String memo;
 	
 	
+	@TableField("task_number")
+	private Integer taskNumber;
+	
 }

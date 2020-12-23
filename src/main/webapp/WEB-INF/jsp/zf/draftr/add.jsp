@@ -38,7 +38,7 @@
 							<input type="hidden" name="state" id="state" value="${draftEntity.state }">
 							<input type="hidden" name="filePath" id="filePath"   value="${draftEntity.filePath }" />
 							<div class="form-group">
-                                <label class="col-sm-3 control-label">稿件标题*：</label>
+                                <label class="col-sm-3 control-label">稿件标题：</label>
                                 <div class="col-sm-8">
                                    <input id="title" name="title"  type="text" class="form-control" required="" value="${draftEntity.title }" />
                                 </div>
